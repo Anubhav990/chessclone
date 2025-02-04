@@ -8,8 +8,6 @@ const app = express();
 const server = http.createServer(app);
 
 // const io = socket(server);
-// Enable CORS (Avoid cross-origin issues)
-app.use(cors());
 
 // Initialize Socket.io properly
 const io = require("socket.io")(server, {
