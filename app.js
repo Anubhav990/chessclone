@@ -7,15 +7,7 @@ const path = require("path");
 const app = express();
 const server = http.createServer(app);
 
-// const io = socket(server);
-
-// Initialize Socket.io properly
-const io = require("socket.io")(server, {
-    cors: {
-        origin: "*",  // Allow all origins (Adjust for security if needed)
-        methods: ["GET", "POST"]
-    }
-});
+const io = socket(server);
 
 const chess = new Chess();
 let players = {};
